@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Ntinda | Portfolio</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            color: #1a1a2e;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 2.5rem;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            border-bottom: 3px solid #e94560;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 60%;
+            object-fit: cover;
+            border: 4px solid #e94560;
+            background: #ddd;
+            flex-shrink: 0;
+        }
+
+        /* temporary placeholder style – replace with your photo */
+        
+
+        .header-text h1 {
+            font-size: 2.8rem;
+            color: #0f3460;
+            letter-spacing: -0.5px;
+        }
+
+        .header-text .badge {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 0.3rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 0.3rem;
+        }
+
+        .header-text p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #0f3460;
+            border-left: 6px solid #e94560;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* ===== ABOUT ===== */
+        .about-text {
+            font-size: 1.1rem;
+            color: #333;
+            max-width: 800px;
+        }
+
+        /* ===== EDUCATION ===== */
+        .edu-item {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 1.2rem 1.8rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid #0f3460;
+        }
+
+        .edu-item h3 {
+            font-size: 1.3rem;
+            color: #0f3460;
+        }
+
+        .edu-item .meta {
+            color: #e94560;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: #0f3460;
+            color: white;
+            padding: 0.6rem 1.6rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: #e94560;
+            transform: scale(1.04);
+        }
+
+        /* ===== WHAT I CAN DO ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 4px solid #e94560;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .service-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card h4 {
+            font-size: 1.2rem;
+            color: #0f3460;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .contact-links a {
+            background: #0f3460;
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+
+        .contact-links a:hover {
+            background: #e94560;
+            transform: scale(1.05);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 700px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="header">
+            <!-- REPLACE this div with your actual photo: 
+            <img src="your-photo.jpg" alt="Simon Ntinda" class="photo" /> 
+            -->
+            <img src="images/simon.jpg" alt="Simon Ntinda" class="photo" />
+
+            <div class="header-text">
+                <h1>Simon Ntinda</h1>
+                <span class="badge">🎓 Final Year · Software Development</span>
+                <p>Namibia University of Science &amp; Technology</p>
+            </div>
+        </div>
+
+        <!-- ===== ABOUT ===== -->
+        <section>
+            <h2>👤 About Me</h2>
+            <p class="about-text">
+                I'm a final-year Computer Science student at NUST with a passion for building clean,
+                functional software. I enjoy solving problems, learning new technologies, and turning ideas
+                into real products. I'm currently preparing to step into the industry as a software developer.
+            </p>
+        </section>
+
+        <!-- ===== EDUCATION ===== -->
+        <section>
+            <h2>🎓 Education</h2>
+
+            <div class="edu-item">
+                <h3>Namibia University of Science and Technology</h3>
+                <p class="meta">Bachelor of Computer Science · Software Development</p>
+                <p><strong>Final Year (2026)</strong></p>
+                <p style="margin-top:0.3rem; color:#555;">
+                    Relevant coursework: Data Structures, Databases, Web Development, Software Engineering, 
+                    Mobile App Development, and Cloud Computing.
+                </p>
+            </div>
+
+            <!-- Add more education items if needed (e.g., high school, certifications) -->
+        </section>
+
+        <!-- ===== SKILLS / WHAT I CAN DO ===== -->
+        <section>
+            <h2>⚡ What I Can Do</h2>
+
+            <div style="margin-bottom:1.2rem;">
+                <h3 style="font-size:1.2rem; color:#0f3460; margin-bottom:0.6rem;">Technical Skills</h3>
+                <div class="skills-grid">
+                    <!-- Replace these with YOUR actual skills -->
+                    <span class="skill-tag">HTML / CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Git / GitHub</span>
+                    <span class="skill-tag">REST APIs</span>
+                </div>
+            </div>
+
+            <div>
+                <h3 style="font-size:1.2rem; color:#0f3460; margin-bottom:0.6rem;">Services &amp; Expertise</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon">🌐</div>
+                        <h4>Web Development</h4>
+                        <p style="font-size:0.9rem; color:#555;">Responsive websites &amp; web apps</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">📱</div>
+                        <h4>Mobile Apps</h4>
+                        <p style="font-size:0.9rem; color:#555;">Cross-platform mobile development</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🗄️</div>
+                        <h4>Database Design</h4>
+                        <p style="font-size:0.9rem; color:#555;">SQL, MongoDB, data modeling</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🔧</div>
+                        <h4>Problem Solving</h4>
+                        <p style="font-size:0.9rem; color:#555;">Algorithm design &amp; debugging</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section>
+            <h2>📬 Let's Connect</h2>
+            <div class="contact-links">
+                <!-- Replace with your actual links -->
+                <a href="mailto:simon.ntinda@example.com">✉️ Email</a>
+                <a href="https://www.linkedin.com/in/simon-ntinda-3051ba30a/" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/224028162" target="_blank">🐙 GitHub</a>
+                
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer">
+            &copy; 2026 Simon Ntinda · Built with ❤️
+        </div>
+
+    </div>
+
+</body>
+</html>
